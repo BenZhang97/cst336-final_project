@@ -1,0 +1,27 @@
+<%- include ('templates/header'); -%>
+
+<div class='container'>
+	<div class='jumbotron'>
+		<h3 style='text-align: center'> Confirmation </h3>
+		<br>
+		<div class='form-group row'>
+			<div class='col-sm-6'></div>
+			    <a class='btn btn-primary' href='/HOME'>Return</a>
+		</div>
+	</div>
+		<form action='/book/<%=flight%>?_method=PUT' method='POST'>
+	    	   <h3 style='text-align: center'> Are you sure you want to book this flight? </h3>
+	    	   <br>
+		<div class='form-group row'>
+			<div class='col-sm-2'></div>
+			<div class='col-sm-4'>
+			    <a class='btn btn-danger btn-block' href='/reserve'>No, Cancel</a>
+			</div>
+			<div class='col-sm-4'>
+				<button class='btn btn-primary btn-block'>Yes</button>
+			</div>
+			<div class='col-sm-2'></div>
+		</div>
+	</form>
+</div>
+<%- include ('templates/footer'); -%>
